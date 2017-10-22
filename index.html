@@ -1,0 +1,240 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+  <style>
+    .section.aboutme {
+      height: 100vh;
+      justify-content: center;
+      color: white;
+      background-image: url("./background-splash.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .section.contact {
+      justify-content: center;
+    }
+
+    .menu {
+      background-color: rgba(255, 255, 255, 0.9);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-left: 10px;
+    }
+
+    .backdrop {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 5px;
+    }
+
+    .menu__list {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .menu__name {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    .menu__link {
+      color: black;
+    }
+
+    .menu__item:visited,
+    .menu__link:link {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    .menu__link:active,
+    .menu__link:hover {
+      color: #0070c9;
+      text-decoration: none;
+
+    }
+
+    .menu__list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu__item {
+      padding: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: lighter;
+      font-size: 12px;
+    }
+
+    .section {
+      padding: 50px;
+      min-height: 50vh;
+    }
+
+    .section:nth-child(odd) {
+      background-color: #FAFAFA;
+    }
+
+    .section:nth-child(even) {
+      background-color: white;
+    }
+
+    .section:nth-child(1) {
+      background-color: red;
+    }
+
+    .education {
+      background-color: #6DBCDB;
+    }
+
+    .section,
+    .content__item div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+
+
+    .content__item div *>*+*,
+    .aboutme>*+*,
+    .work>*+*,
+    .education>*+* {
+      margin-top: 20px;
+    }
+
+    .project-link {
+      color: black;
+    }
+
+    .resume__img {
+      width: 50vw;
+      box-shadow: 0px 1px 4px -1px black;
+    }
+
+    .resume__link-text {
+      font-size: 11px;
+      margin-top: 3px;
+      margin-bottom: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a class="menu__link" href="#">
+          <h1 class="menu__name">Henry Tran</h1>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#education">Education</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#work">Work</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#resume">Resume</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="aboutme" class="section aboutme">
+    <h2 class="backdrop">
+      Hi, I'm Henry!
+    </h2>
+    <div class="content__item">
+      <div>
+        <p class="backdrop">
+          I am a full-stack software engineer based in San Francisco, CA. I specialize in React JS, React Native, JavaScript, and Ruby
+          on Rails.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="education" class="section education">
+    <h2>
+      Education
+    </h2>
+    <div class="content__item">
+      <div>
+        <img src="./stanford.png" height="80px" alt="Stanford University logo" />
+        <h3>Stanford University</h3>
+        <p>B.S. Computer Science - Human-Computer Interaction</p>
+        <p>Sep 2012 - Jun 2016</p>
+      </div>
+    </div>
+  </div>
+  <div id="work" class="section work">
+    <h2>
+      Work
+    </h2>
+    <div class="content__item">
+      <div class="ratings-and-reviews">
+        <a class="project-link" href="https://www.truecar.com/acura/ilx/reviews">
+          <h3>TrueCar - Ratings And Reviews</h3>
+          <img width="300px" src="./ratingsandreviews.png" alt="Screenshot of the TrueCar Ratings and Reviews Page" />
+        </a>
+
+
+        <p>Owner-generated reviews and ratings, offering top keywords for a vehicle, keyword search, and top positive and top
+          critical reviews.</p>
+      </div>
+    </div>
+    <div class="content__item">
+      <div class="sales-analyzer">
+        <h3>TrueCar - Sales Analyzer 2.0</h3>
+        <img width="300px" src="./sales-analyzer-map.png" alt="Screenshot of a SalesAnalyzer Map" />
+        <p>A map-based sales analysis tool for car dealerships.</p>
+      </div>
+    </div>
+  </div>
+  <div id="personal-projects" class="section personal-projects">
+    <h2>
+      Personal Projects
+    </h2>
+    <div class="content__item">
+      <div class="one-client">
+        <h3>OneClient</h3>
+        <p>A better reddit client targeting iOS and Android</p>
+      </div>
+    </div>
+  </div>
+  <div id="resume" class="section resume">
+    <h2>
+      Resume
+    </h2>
+    <a href="./resume-henry-tran.pdf">
+      <img width="50vw" class="resume__img" src="./resume.png" alt="Screenshot of Henry Tran's Resume" />
+      <p class="resume__link-text">Click to download</p>
+    </a>
+  </div>
+  <div id="contact" class="section contact">
+    <h2>
+      Contact Me
+    </h2>
+    <p>Email:
+      <a href="mailto:hhtran@cs.stanford.edu?Subject=Hi!">hhtran@cs.stanford.edu</a>
+    </p>
+    <p>GitHub:
+      <a href="https://github.com/hhtran">hhtran</a>
+    </p>
+    <p>LinkedIn:
+      <a href="https://www.linkedin.com/in/henryhoangtran/">henryhoangtran</a>
+    </p>
+  </div>
+</body>
+
+</html>
