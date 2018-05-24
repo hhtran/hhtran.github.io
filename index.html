@@ -38,6 +38,10 @@
       width: 100%;
     }
 
+    .full-height {
+      height: 100%;
+    }
+
     .flex-column {
       flex-direction: column;
     }
@@ -69,6 +73,12 @@
       justify-content: center;
       align-items: center;
       padding: 72px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .segment {
+        padding: 72px 18px;
+      }
     }
 
     .segment:nth-of-type(even) {
@@ -129,6 +139,10 @@
     #js-logo {
       background-color: #EDDA68;
     }
+
+    .segment__img {
+      max-width: 600px
+    }
   </style>
 </head>
 
@@ -175,13 +189,13 @@
     </h2>
     <div class="full-width">
       <h3 class="title-2">TrueCar Sales Analyzer</h3>
-      <iframe src="https://player.vimeo.com/video/198307639" class="full-width" frameborder="0" webkitallowfullscreen mozallowfullscreen
-        allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/198307639" height="400px" class="full-width" frameborder="0" webkitallowfullscreen
+        mozallowfullscreen allowfullscreen></iframe>
     </div>
     <div>
       <h3 class="title-2">TrueCar Ratings And Reviews</h3>
       <a href="https://www.truecar.com/acura/ilx/reviews/">
-        <img class="full-width" src="./ratingsandreviews.png"></img>
+        <img class="full-width segment__img" src="./ratingsandreviews.png"></img>
       </a>
     </div>
   </div>
@@ -190,7 +204,7 @@
       Resume
     </h2>
     <a class="d-block full-width" href="./resume-henry-tran.pdf">
-      <img class="full-width" class="resume__img" src="./resume.png" alt="Screenshot of Henry Tran's Resume" />
+      <img class="full-width segment__img" class="resume__img" src="./resume.png" alt="Screenshot of Henry Tran's Resume" />
       <p class="resume__link-text">Click to download</p>
     </a>
   </div>
