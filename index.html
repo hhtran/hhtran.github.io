@@ -1,294 +1,212 @@
 <html>
 
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    img {
+    body {
       margin: 0;
-      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: 'Open Sans', sans-serif;
     }
 
-    .h1,
     h1 {
-      font-size: 2.5rem
+      font-size: 56px;
     }
 
-    .h2,
+    .title-1 {
+      font-size: 36px;
+    }
+
+    .title-2 {
+      font-size: 24px;
+    }
+
     h2 {
-      font-size: 2rem
+      font-size: 20px;
     }
 
-    .h3,
-    h3 {
-      font-size: 1.75rem
-    }
-
-    .h4,
-    h4 {
-      font-size: 1.5rem
-    }
-
-    .h5,
-    h5 {
-      font-size: 1.25rem
-    }
-
-    .h6,
-    h6 {
-      font-size: 1rem
-    }
-
-    .section.aboutme {
-      height: 100vh;
-      justify-content: center;
-      color: white;
-      background-image: url("./background-splash.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .section.contact {
-      justify-content: center;
-    }
-
-    .menu {
-      background-color: rgba(255, 255, 255, 0.9);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding-left: 10px;
-    }
-
-    .backdrop {
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 5px;
-    }
-
-    .menu__list {
+    .d-flex {
       display: flex;
-      justify-content: space-around;
     }
 
-    .menu__name {
-      font-size: 18px;
-      margin-bottom: 0;
+    .d-block {
+      display: block;
     }
 
-    .menu__link {
-      color: black;
+    .full-width {
+      width: 100%;
     }
 
-    .menu__item:visited,
-    .menu__link:link {
-      color: black;
-      text-decoration: none;
-
-    }
-
-    .menu__link:active,
-    .menu__link:hover {
-      color: #0070c9;
-      text-decoration: none;
-
-    }
-
-    .menu__list {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu__item {
-      padding: 10;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: lighter;
-      font-size: 12px;
-    }
-
-    .section {
-      padding: 50px;
-      min-height: 50vh;
-    }
-
-    .section>*+* {
-      margin-top: 20px;
-    }
-
-    .section:nth-child(odd) {
-      background-color: #FAFAFA;
-    }
-
-    .section:nth-child(even) {
-      background-color: white;
-    }
-
-    .section:nth-child(1) {
-      background-color: red;
-    }
-
-    .education {
-      background-color: #6DBCDB;
-    }
-
-    .section,
-    .content__item div {
-      display: flex;
+    .flex-column {
       flex-direction: column;
-      justify-content: space-around;
+    }
+
+    .justify-content-center {
+      justify-content: center;
+    }
+
+    .d-inline-block {
+      display: inline-block;
+    }
+
+    .align-items-center {
       align-items: center;
+    }
+
+    #hero {
+      height: 80vh;
+    }
+
+    #peek {
+      min-height: 20vh;
+    }
+
+    .segment {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 72px;
+    }
+
+    .segment:nth-of-type(even) {
+      background-color: #E4EEF0;
+
+    }
+
+    .segment>*+* {
+      margin-top: 36px;
+    }
+
+    .segment__heading {
+      max-width: 720px;
+      margin: 0px;
       text-align: center;
     }
 
-
-    .content__item *>*+*,
-    .aboutme>*+*,
-    .work>*+*,
-    .education>*+* {
-      margin-top: 20px;
-    }
-
-    .project-link {
+    .btn {
+      padding: 10px;
+      color: white;
+      border: none;
+      padding: 17px 24px;
+      font-size: 16px;
+      border-radius: 0;
       text-decoration: none;
-      color: black;
     }
 
-    .project-link:hover {
-      color: purple;
+    .btn__primary {
+      background-color: #1a73e8;
     }
 
-    .ratings-and-reviews-img {
-      max-width: 100%;
+    .space-x-1>*+* {
+      margin-left: 20px;
     }
 
-    .resume__img {
-      width: 50vw;
-      box-shadow: 0px 1px 4px -1px black;
+    .padding-1 {
+      padding-top: 36px;
+      padding-bottom: 36px;
     }
 
-    .resume__link-text {
-      font-size: 11px;
-      margin-top: 3px;
-      margin-bottom: 0px;
+    .stackables {
+      display: flex;
+      flex-flow: wrap;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .stackables__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 200px;
+      width: 200px;
+    }
+
+    #js-logo {
+      background-color: #EDDA68;
     }
   </style>
 </head>
 
 <body>
-  <nav class="menu">
-    <ul class="menu__list">
-      <li class="menu__item">
-        <a class="menu__link" href="#">
-          <h1 class="menu__name">Henry Tran</h1>
-        </a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#education">Education</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#work">Work</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#resume">Resume</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <div id="aboutme" class="section aboutme">
-    <h2 class="backdrop">
-      Hi, I'm Henry!
+  <div id="hero" class="segment">
+    <h1>Hi! I'm Henry Tran.</h1>
+    <h2>I am a Full-Stack Software Engineer in San Francisco, CA.</h2>
+    <div class="d-flex space-x-1">
+      <a class="btn btn__primary" href="mailto:htran@cs.stanford.edu?Subject=Hello!">Email</a>
+      <a class="btn btn__primary" href="https://github.com/hhtran">GitHub</a>
+      <a class="btn btn__primary" href="https://www.linkedin.com/in/henryhoangtran/">LinkedIn</a>
+    </div>
+  </div>
+  <div id="peek" class="segment">
+    <h2 class="title-1 segment__heading">
+      What are my specialties?
     </h2>
-    <div class="content__item">
-      <div>
-        <p class="backdrop">
-          I am a full-stack software engineer based in San Francisco, CA. I specialize in React JS, React Native, JavaScript, and Ruby
-          on Rails.
-        </p>
+    <div class="stackables">
+      <div class="stackables__item">
+        <img src="./react.svg" width="72px" height="72px" />
+        <h3 class="d-inline-block">React / React Native</h3>
+      </div>
+      <div class="stackables__item">
+        <img id="js-logo" src="./js.svg" width="72px" height="72px" />
+        <h3 class="d-inline-block">JavaScript</h3>
+      </div>
+      <div class="stackables__item">
+        <img src="./rails.svg" width="72px" height="72px" />
+        <h3 class="d-inline-block">Ruby On Rails</h3>
       </div>
     </div>
   </div>
-  <div id="education" class="section education">
-    <h2>
-      Education
-    </h2>
-    <div class="content__item">
-      <div>
-        <img src="./stanford.png" height="80px" alt="Stanford University logo" />
-        <h3>Stanford University</h3>
-        <p>B.S. Computer Science - Human-Computer Interaction</p>
-        <p>Sep 2012 - Jun 2016</p>
-      </div>
+  <div class="segment">
+    <h2 class="title-1 segment__heading">Education</h2>
+    <img src="stanford.svg" width="72px" height="72px" />
+    <div>
+      <h3>Stanford University</h3>
+      <h3>B.S. Computer Science </h3>
     </div>
   </div>
-  <div id="work" class="section work">
-    <h2>
-      Work
+  <div class="segment">
+    <h2 class="title-1 segment__heading">
+      Things I've Worked On
     </h2>
-    <div class="content__item">
-      <div class="ratings-and-reviews">
-        <a class="project-link" href="https://www.truecar.com/acura/ilx/reviews">
-          <h3>TrueCar - Ratings And Reviews</h3>
-          <img class="ratings-and-reviews-img" width="800px" src="./ratingsandreviews.png" alt="Screenshot of the TrueCar Ratings and Reviews Page"
-          />
-        </a>
-
-
-        <p>Owner-generated reviews and ratings, offering top keywords for a vehicle, keyword search, and top positive and top
-          critical reviews.</p>
-      </div>
+    <div>
+      <h3 class="title-2">TrueCar Sales Analyzer</h3>
+      <iframe src="https://player.vimeo.com/video/198307639" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen></iframe>
     </div>
-    <div class="content__item">
-      <div class="sales-analyzer">
-        <h3>TrueCar - Sales Analyzer 2.0</h3>
-        <img width="300px" src="./sales-analyzer-map.png" alt="Screenshot of a SalesAnalyzer Map" />
-        <p>A map-based sales analysis tool for car dealerships.</p>
-      </div>
+    <div>
+      <h3 class="title-2">TrueCar Ratings And Reviews</h3>
+      <a href="https://www.truecar.com/acura/ilx/reviews/">
+        <img width="640" height="360" src="./ratingsandreviews.png"></img>
+      </a>
     </div>
   </div>
-  <div id="personal-projects" class="section personal-projects">
-    <h2>
-      Personal Projects
-    </h2>
-    <div class="content__item">
-      <div class="one-client">
-        <h3>OneClient</h3>
-        <p>A better reddit client targeting iOS and Android</p>
-      </div>
-    </div>
-  </div>
-  <div id="resume" class="section resume">
-    <h2>
+  <div class="segment">
+    <h2 class="title-1 segment__heading">
       Resume
     </h2>
-    <a href="./resume-henry-tran.pdf">
-      <img width="50vw" class="resume__img" src="./resume.png" alt="Screenshot of Henry Tran's Resume" />
+    <a class="d-block full-width" href="./resume-henry-tran.pdf">
+      <img width="full-width" class="resume__img" src="./resume.png" alt="Screenshot of Henry Tran's Resume" />
       <p class="resume__link-text">Click to download</p>
     </a>
   </div>
-  <div id="contact" class="section contact">
-    <h2>
+  <div class="segment">
+    <h2 class="title-1 segment__heading">
       Contact Me
     </h2>
-    <p>Email:
-      <a href="mailto:hhtran@cs.stanford.edu?Subject=Hi!">hhtran@cs.stanford.edu</a>
-    </p>
-    <p>GitHub:
-      <a href="https://github.com/hhtran">hhtran</a>
-    </p>
-    <p>LinkedIn:
-      <a href="https://www.linkedin.com/in/henryhoangtran/">henryhoangtran</a>
-    </p>
+    <div class="stackables">
+      <div class="stackables__item">Email:
+        <a href="mailto:hhtran@cs.stanford.edu?Subject=Hi!">hhtran@cs.stanford.edu</a>
+      </div>
+      <div class="stackables__item">GitHub:
+        <a href="https://github.com/hhtran">hhtran</a>
+      </div>
+      <div class="stackables__item">LinkedIn:
+        <a href="https://www.linkedin.com/in/henryhoangtran/">henryhoangtran</a>
+      </div>
+    </div>
   </div>
 </body>
 
